@@ -1,0 +1,35 @@
+{
+  "name": "elect-app",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "react": "^16.4.2",
+    "react-dom": "^16.4.2",
+    "react-scripts": "1.1.5"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
+  "main": "index.html",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/izsi-salmon/homeAuto-app.git"
+  },
+  "keywords": [
+    "home",
+    "automation",
+    "react",
+    "node"
+  ],
+  "author": "Isabelle Salmon",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/izsi-salmon/homeAuto-app/issues"
+  },
+  "homepage": "https://github.com/izsi-salmon/homeAuto-app#readme",
+  "description": ""
+}
