@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+        <meta charset="utf-8">
+        <title>Elect</title>
+        <link rel="icon" href="images/electLogoIcon.png" type="image/gif">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="css/style.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+        <script src="js/script.js"></script>
+    </head>
+    <body>
+        <div class="nav-bar">
+            <a href="index.html" class="nav-link"><i class="fas fa-home active"></i></a><a href="devices.html" class="nav-link"><i class="fas fa-bolt nav-link"></i></a><a href="schedule.html"><img src="images/scheduleIconBLACK.png" alt="navigation link" class="nav-link"></a>
+        </div>
+        <div class="modal">
+            <div class="modal-content">
+                <p class="modal-title">LIVING ROOM LIGHT 1</p>
+                <span class="modal-close"><i class="fas fa-times"></i></span>
+                <p class="setting-title">FROM:</p>
+                <div class="timer-wrapper">
+                    <div class="caret-wrapper"><span class="caret" onclick="upHourClick(fromTimeHr)"><i class="fas fa-angle-up"></i></span><span class="caret" onclick="upMinClick(fromTimeMin)"><i class="fas fa-angle-up"></i></span></div>
+                    <div class="time"><span id="fromTimeHr">06</span>:<span id="fromTimeMin">00</span></div>
+                    <div class="caret-wrapper"><span class="caret" onclick="downHourClick(fromTimeHr)"><i class="fas fa-angle-down"></i></span><span class="caret" onclick="downMinClick(fromTimeMin)"><i class="fas fa-angle-down"></i></span></div>
+                </div>
+                <p class="setting-title">TO:</p>
+                <div class="timer-wrapper">
+                    <div class="caret-wrapper"><span class="caret" onclick="upHourClick(toTimeHr)"><i class="fas fa-angle-up"></i></span><span class="caret" onclick="upMinClick(toTimeMin)"><i class="fas fa-angle-up"></i></span></div>
+                    <div class="time"><span id="toTimeHr">08</span>:<span id="toTimeMin">00</span></div>
+                    <div class="caret-wrapper"><span class="caret" onclick="downHourClick(toTimeHr)"><i class="fas fa-angle-down"></i></span><span class="caret" onclick="downMinClick(toTimeMin)"><i class="fas fa-angle-down"></i></span></div>
+                </div>
+                <p class="setting-title">TEMPERATURE:</p>
+                <div class="freq-wrapper">
+                    <div class="time freq"><span class="caret" onclick="downTempClick(modalTempAdjust)"><i class="fas fa-angle-left"></i></span><span class="modal-temp" id="modalTempAdjust">23</span><span>°C</span><span class="caret" onclick="upTempClick(modalTempAdjust)"><i class="fas fa-angle-right"></i></span></div>
+                </div>
+                <span class="ok ok-desktop">OK</span>
+          </div>
+            <div class="modal-bar-bottom"><span class="ok">OK</span></div>
+        </div>
+        <div class="header">
+            <a href="index.html"><img src="images/electLogoOpt.png" alt="Elect's lightbulb logo" class="logo-img"></a>
+            <div class="header-nav">
+                <a href="devices.html" class="header-nav-link"><i class="fas fa-bolt header-nav-icon"></i><span>MY DEVICES</span></a>
+                <a href="schedule.html" class="header-nav-link"><img src="images/scheduleIconWhite.png" alt="schedule icon" class="header-nav-icon"><span>MY SCHEDULE</span></a>
+            </div>
+        </div>
+        <div class="main-content">
+            <h1 class="heading greeting">Mōrena Matt!</h1>
+            <div class="mc-temp-flex">
+                <p class="medium-text">Current household temperature:</p>
+                <p id="temperature">23°C</p>
+            </div>
+        </div>
+        <div class="section-bar">
+            <p><i class="fas fa-thumbtack"></i>&nbsp; pinned schedule</p>
+        </div>
+        <div class="section">
+            <div class="box box-schedule">
+                <img src="images/heatingIcon.png" alt="heating-icon" class="icon icon-sched"><h3 class="heading-sched">Living room</h3>
+                <div class="sched-info">
+                    <div class="flex wrap-hack"><img src="images/scheduleIconBLACK.png" alt="" class="icon icon-sched-info"><p>06:00–08:00</p></div>
+                    <div class="flex"><p><i class="fas fa-thermometer-half sched-info-icons sched-temp-display"></i>25°C</p></div>
+                    <div class="flex"><i class="fas fa-pen-square sched-info-icons pop-up"></i></div>
+                </div>
+                <div class="sched-info">
+                    <div class="flex wrap-hack"><img src="images/scheduleIconBLACK.png" alt="" class="icon icon-sched-info"><p>17:00–20:30</p></div>
+                    <div class="flex"><p><i class="fas fa-thermometer-half sched-info-icons sched-temp-display"></i>23°C</p></div>
+                    <div class="flex"><i class="fas fa-pen-square sched-info-icons pop-up"></i></div>
+                </div>
+            </div>
+        </div>
+        <div class="section-bar">
+            <p><i class="fas fa-bolt"></i>&nbsp; current devices</p>
+        </div>
+        <div class="section">
+            <div class="box">
+                <div class="current-device-flex">
+                    <div class="device-flex"><i class="far fa-lightbulb"></i><p>Living room light</p></div>
+                    <div class="device-flex"><label class="switch"><input type="checkbox" checked><span class="slider round yellow"></span></label><i class="fas fa-ellipsis-v drop-down"></i></div>
+                </div>
+                <div class="device-settings">
+                    <p class="device-settings-p">BRIGHTNESS</p>
+                    <div class="slider-container">
+                        <input type="range" min="1" max="100" value="80" class="range range-yellow">
+                    </div>
+                </div>
+            </div>
+            <div class="box">
+                <div class="current-device-flex">
+                    <div class="device-flex"><i class="far fa-lightbulb"></i><p>Bathroom light</p></div>
+                    <div class="device-flex"><label class="switch"><input type="checkbox" checked><span class="slider round yellow"></span></label><i class="fas fa-ellipsis-v drop-down"></i></div>
+                </div>
+                <div class="device-settings">
+                    <p class="device-settings-p">BRIGHTNESS</p>
+                    <div class="slider-container">
+                        <input type="range" min="1" max="100" value="80" class="range range-yellow">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="page-end"></div>
+    </body>
+</html>

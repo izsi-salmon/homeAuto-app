@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+        <meta charset="utf-8">
+        <title>My scheduel | Elect</title>
+        <link rel="icon" href="images/electLogoIcon.png" type="image/gif">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="css/style.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+        <script src="js/script.js"></script>
+    </head>
+    <body>
+        <div class="nav-bar">
+            <a href="index.html" class="nav-link"><i class="fas fa-home"></i></a><a href="devices.html" class="nav-link"><i class="fas fa-bolt nav-link active"></i></a><a href="schedule.html"><img src="images/scheduleIconBLACK.png" alt="navigation link" class="nav-link"></a>
+        </div>
+        <div class="modal">
+            <div class="modal-content no-device-mobile">
+                <p class="modal-title">NO DEVICES FOUND</p>
+                
+                <span class="modal-close"><i class="fas fa-times"></i></span>
+                <div class="timer-wrapper">
+                    <h2>Sorry, you have no devices of this type connected!</h2>
+                </div>
+                <span class="ok ok-desktop">OK</span>
+          </div>
+            <div class="modal-bar-bottom"><span class="ok">OK</span></div>
+        </div>
+        <div class="header">
+            <a href="index.html"><img src="images/electLogoOpt.png" alt="Elect's lightbulb logo" class="logo-img"></a>
+            <div class="header-nav">
+                <a href="devices.html" class="header-nav-link"><i class="fas fa-bolt header-nav-icon"></i><span>MY DEVICES</span></a>
+                <a href="schedule.html" class="header-nav-link"><img src="images/scheduleIconWhite.png" alt="schedule icon" class="header-nav-icon"><span>MY SCHEDULE</span></a>
+            </div>
+        </div>
+        <h1 class="heading my-sched my-dev">My Devices</h1>
+        <div class="device-box-row">
+            <a href="rama.html" class="device-box device-box-yellow box-left">
+                <div>
+                <img src="images/illustrationLight.png" alt="lightbulb illustration" class="illustration">
+                <div>
+                    <div class="device-title">Rama</div>
+                    <p class="device-title-eng">light</p>
+                </div>
+            </div>
+            </a>
+            <a href="mahana.html" class="device-box device-box-orange box-right">
+                <div>
+                    <img src="images/illustrationHeating.png" alt="heat waves illustration" class="illustration">
+                    <div>
+                    <div class="device-title">Mahana</div>
+                    <p class="device-title-eng">heating</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="device-box-row">
+            <a href="#" class="device-box device-box-blue box-left pop-up">
+                <div>
+                    <img src="images/illustrationSpeaker.png" alt="speaker illustration" class="illustration">
+                    <div>
+                        <div class="device-title">Tukuoro</div>
+                        <p class="device-title-eng">sound</p>
+                    </div>
+                </div>
+            </a>
+            <a href="#" class="device-box device-box-green box-right pop-up">
+                <div>
+                    <img src="images/illustrationSafety.png" alt="smoke alarm illustration" class="illustration">
+                    <div>
+                        <div class="device-title">Marutau</div>
+                        <p class="device-title-eng">saftey</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="page-end"></div>
+    </body>
+</html>
